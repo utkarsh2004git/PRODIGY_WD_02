@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class=" flex flex-col bg-gradient-to-b from-gray-900 to-gray-800 gap-3 h-screen w-full justify-center items-center">
-      <div class="bg-white flex flex-col justify-center items-center rounded-3xl p-12 w-4/5">
+      <div class="bg-white  flex flex-col justify-center items-center rounded-3xl p-12 w-4/5 ">
         <div class="time" id="time">
             <div class="md:text-3xl text-xl py-6 w-full">
                 <span class="w-5 sm:w-10 inline-block digit" id="hr">00</span>
@@ -22,18 +22,18 @@
         </div>
         <div class="flex sm:flex-row flex-col justify-center items-center">
 
-               <div class="flex sm:flex-row flex-col justify-center items-center">
-                <button class="sm:w-36 w-44 px-3 py-2 bg-green-600 hover:bg-green-700 mx-2 my-2 rounded-xl hover:scale-95 duration-200 text-white "  onclick="start()">Start</button>
-                <button class="sm:w-36 w-44 px-3 py-2 bg-red-600 hover:bg-red-800 mx-2 my-2 rounded-xl hover:scale-95 duration-200 text-white " onclick="stop()">Stop</button>
-                <button class="sm:w-36 w-44 px-3 py-2 bg-blue-600 hover:bg-blue-700  mx-2 my-2 rounded-xl hover:scale-95 duration-200 text-white " onclick="reset()">Reset</button>
+               <div class="flex sm:flex-row flex-col justify-center items-center text-white text-xl">x
+                <button class="sm:w-36 w-44 px-3 py-2 bg-green-600 hover:bg-green-700 mx-2 my-2 rounded-xl hover:scale-95 duration-200  "  onclick="start()">Start</button>
+                <button class="sm:w-36 w-44 px-3 py-2 bg-red-600 hover:bg-red-800 mx-2 my-2 rounded-xl hover:scale-95 duration-200  " onclick="stop()">Stop</button>
+                <button class="sm:w-36 w-44 px-3 py-2 bg-blue-600 hover:bg-blue-700  mx-2 my-2 rounded-xl hover:scale-95 duration-200  " onclick="reset()">Reset</button>
                </div>
-            <div onclick="addTimestamp()"  class="stamp cursor-pointer -z-10 mt-5  sm:mt-0 bg-green-700 rounded-full p-2 sm:p-4 w-fit mx-auto  ">
+            <div onclick="addTimestamp()"  class="stamp cursor-pointer -z-10 mt-5  sm:mt-0 bg-green-700 rounded-full  p-6 sm:p-4 w-fit mx-auto  ">
                 <img class="w-5" src="./flag.svg" alt="timeStamp">
             </div>
         </div>
       </div>
 
-      <div class="time-box  h-1/3 overflow-y-auto  rounded-xl mt-3 px-6 text-white  w-fit  flex justify-center">
+      <div class="time-box  h-1/3 overflow-y-auto  rounded-xl mt-3 px-6  w-fit  flex justify-center">
         <div class="mt-3  text-xl text-white sm:text-3xl w-fit flex justify-center">
             <ul class="list p-6 flex flex-col gap-2" id="timestampList">
 

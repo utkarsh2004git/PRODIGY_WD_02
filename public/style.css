@@ -725,6 +725,10 @@ html{
   padding: 1.5rem;
 }
 
+.p-3{
+  padding: 0.75rem;
+}
+
 .px-3{
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -810,6 +814,10 @@ html{
     padding: 1rem;
   }
 
+  .sm\:p-2{
+    padding: 0.5rem;
+  }
+
   .sm\:text-3xl{
     font-size: 1.875rem;
     line-height: 2.25rem;
@@ -822,8 +830,18 @@ html{
 }
 
 @media (min-width: 768px){
+  .md\:w-1\/2{
+    width: 50%;
+  }
+
   .md\:text-3xl{
     font-size: 1.875rem;
     line-height: 2.25rem;
+  }
+}
+
+@media (min-width: 1024px){
+  .lg\:w-1\/2{
+    width: 50%;
   }
 }
