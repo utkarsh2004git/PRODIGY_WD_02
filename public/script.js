@@ -42,35 +42,43 @@ const reset=()=>{
     
 }
 
-const stopWatch=()=>{
-    if(timer){
-        ms+=1;
-        if(ms==100){
-            sec+=1;
-            ms=0;
-        }
-        if(sec==60){
-            min+=1;
-            sec=0;
-        }
-        if(min==60){
-            hr+=1;
-            min=0;
-            sec=0;
-        }
-        let hrStr=check(hr);
-        let minStr=check(min);
-        let secStr=check(sec);
-        let msStr=check(ms);
+let hr = 0, min = 0, sec = 0, ms = 0;
+let timer = true;
 
-
-        document.getElementById("hr").innerHTML=hrStr;
-        document.getElementById("min").innerHTML=minStr;
-        document.getElementById("sec").innerHTML=secStr;
-        document.getElementById("ms").innerHTML=msStr;
-        setTimeout("stopWatch()",10);
-    }
+const check = (i) => {
+    return i < 10 ? "0" + i : i;
 }
+
+const stopWatch = () => {
+    if (timer) {
+        ms += 1;
+        if (ms === 100) {
+            sec += 1;
+            ms = 0;
+        }
+        if (sec === 60) {
+            min += 1;
+            sec = 0;
+        }
+        if (min === 60) {
+            hr += 1;
+            min = 0;
+            sec = 0;
+        }
+
+        let hrStr = check(hr);
+        let minStr = check(min);
+        let secStr = check(sec);
+        let msStr = ms < 10 ? "0" + ms : ms; // Adjusted for ms formatting
+
+        document.getElementById("hr").innerHTML = hrStr;
+        document.getElementById("min").innerHTML = minStr;
+        document.getElementById("sec").innerHTML = secStr;
+        document.getElementById("ms").innerHTML = msStr;
+
+        setTimeout(stopWatch, 10); // Correct usage of setTimeout
+    }
+};
 
 const getCurrentTimestamp = () => {
     const timeStamp =`${hr.toString().padStart(2, "0")}:${min.toString().padStart(2, "0")}:${sec.toString().padStart(2, "0")}:${ms.toString().padStart(2, "0")}`;
