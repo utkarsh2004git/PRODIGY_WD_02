@@ -68,7 +68,7 @@ const stopWatch=()=>{
         document.getElementById("min").innerHTML=minStr;
         document.getElementById("sec").innerHTML=secStr;
         document.getElementById("ms").innerHTML=msStr;
-        setTimeout("stopWatch()",10);
+        setTimeout(stopWatch,10);
     }
 }
 
